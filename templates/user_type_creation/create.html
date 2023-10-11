@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>User Type Create</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="static/New Folder/vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="static/New Folder/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="static/New Folder/vendors/mdi/css/materialdesignicons.min.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="static/New Folder/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="static/New Folder/images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    {% include  'common/nav-bar.html' %}
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+    {% include 'common/menu-bar.html' %}
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">User Type Create</h4>
+                    <p class="card-description">
+                    </p>
+                    <form class="forms-sample">
+                      <div class="form-group row">
+                        <label for="" class="col-sm-3 col-form-label">User Type</label>
+                        <div class="col-sm-9">
+                          <input type="text" name="user_type" class="form-control" id="user_type" placeholder="User Type">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-3 col-form-label">Status</label>
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <select class="form-control js-example-basic-single form-control-lg" name="status" id="status">
+                                  <option value="1">Active</option>
+                                  <option value="0">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary mr-2" onclick="create_user_type(user_type.value, status.value)">Submit</button>
+                      <a href="/user_type_creation" type="button" class="btn btn-light">Cancel</a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center text-muted">Free <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrap dashboard</a> templates from Bootstrapdash.com</span>
+                    </div>
+                </div>    
+            </div>        
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- base:js -->
+  <script src="static/New Folder/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="static/New Folder/js/off-canvas.js"></script>
+  <script src="static/New Folder/js/hoverable-collapse.js"></script>
+  <script src="static/New Folder/js/template.js"></script>
+  <script src="static/New Folder/js/settings.js"></script>
+  <script src="static/New Folder/js/todolist.js"></script>
+  <!-- js for user type -->
+  <script src="static/js/user_type_creation.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <!-- End custom js for this page-->
+</body>
+
+</html>

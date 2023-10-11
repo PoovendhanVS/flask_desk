@@ -1,0 +1,37 @@
+{% extends '/base.html' %}
+{%block title%}
+User-List
+{%endblock%}
+{%block content%}
+<a href="/login"><button>Login</button></a>
+<a href="/signup"><button>Add</button></a>
+<a href="/logout"><button>Logout</button></a>
+<h3>User Name : {{name}}</h3>
+<table>
+    <thead>
+        <tr>
+        <th>S.No</th>
+        <th>name</th>
+        <th>Email</th>
+        <!-- <th>Password</th> -->
+        <th colspan="2" style="text-align: center;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for row in result %}
+    <tr>
+    <td style="text-align: center;">{{ loop.index }}</td>
+    <td>{{row[1]}}</td>
+    <td>{{row[2]}}</td>
+    <!-- <td>{{row[3]}}</td> -->
+    <td style="text-align: center">
+    <a href="update_user/{{row[0]}}"><button>Edit</button></a>
+    </td>
+    <td  style="text-align: center">
+    <a href="delete_user/{{row[0]}}"><button>Delete</button></a>
+    </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{%endblock%}

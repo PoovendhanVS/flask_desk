@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block head%}
+    {%include 'include/header.html' %}
+    {%endblock%}
+    <title>{%block title%}{%endblock%}</title>
+</head>
+<body>
+
+<div class="container-scroller">
+<!-- partial:../../partials/_navbar.html -->
+{% include  'common/nav-bar.html' %}
+<!-- partial -->
+<div class="container-fluid page-body-wrapper">
+    <!-- partial:../../partials/_settings-panel.html -->
+    {% include 'common/menu-bar.html' %}
+
+    {%block content%}
+
+    {%endblock%}
+    
+</div>
+</div>
+    {%block footer%}
+    {%include 'include/footer.html' %}
+    {%endblock%}
+</body>
+</html>
